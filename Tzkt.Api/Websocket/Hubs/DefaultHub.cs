@@ -51,7 +51,7 @@ namespace Tzkt.Api.Websocket.Hubs
             return BigMaps.Subscribe(Clients.Caller, Context.ConnectionId, parameters);
         }
 
-        public Task SubscribeToAccounts(AccountsParameter parameters)
+        public Task SubscribeToAccount(AccountsParameter parameters)
         {
             parameters.EnsureValid();
             return Accounts.Subscribe(Clients.Caller, Context.ConnectionId, parameters);
